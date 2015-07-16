@@ -1,0 +1,918 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4451" systemVersion="13A461" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="8YX-ce-x5E">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733.0"/>
+    </dependencies>
+    <scenes>
+        <!--class Prefix:identifier First View Controller - First-->
+        <scene sceneID="W3I-pn-N6e">
+            <objects>
+                <viewController title="Households" id="CZ4-MO-1fc" customClass="HouseholdsViewController" sceneMemberID="viewController" storyboardIdentifier="HouseholdsViewController" restorationIdentifier="HouseholdsViewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5"/>
+                        <viewControllerLayoutGuide type="bottom" id="6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2VE-Yg-loa">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="121" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES">
+                                <rect key="frame" x="1" y="10" width="318" height="470"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="122">
+                                        <rect key="frame" x="0.0" y="22" width="318" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="123" tableViewCell="122">
+                                            <rect key="frame" x="0.0" y="0.0" width="318" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="124">
+                                        <rect key="frame" x="0.0" y="66" width="318" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="125" tableViewCell="124">
+                                            <rect key="frame" x="0.0" y="0.0" width="318" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="126">
+                                        <rect key="frame" x="0.0" y="110" width="318" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="127" tableViewCell="126">
+                                            <rect key="frame" x="0.0" y="0.0" width="318" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" id="210" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES">
+                                <rect key="frame" x="12" y="490" width="23" height="23"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted"/>
+                                <state key="selected"/>
+                                <state key="disabled"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="6" firstAttribute="top" secondItem="121" secondAttribute="bottom" constant="30" id="128"/>
+                            <constraint firstItem="121" firstAttribute="leading" secondItem="2VE-Yg-loa" secondAttribute="leading" constant="0.0" id="129"/>
+                            <constraint firstItem="121" firstAttribute="trailing" secondItem="2VE-Yg-loa" secondAttribute="trailing" constant="0.0" id="130"/>
+                            <constraint firstItem="5" firstAttribute="bottom" secondItem="121" secondAttribute="top" constant="23" id="131"/>
+                            <constraint firstItem="210" firstAttribute="leading" secondItem="2VE-Yg-loa" secondAttribute="leading" constant="10" id="211"/>
+                            <constraint firstItem="6" firstAttribute="top" secondItem="210" secondAttribute="bottom" constant="5" id="212"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Households" image="974-users.png" id="u1e-5L-l1D"/>
+                    <connections>
+                        <outlet property="tblHouseholds" destination="121" id="name-outlet-121"/>
+                        <outlet property="btnAddHousehold" destination="210" id="name-outlet-210"/>
+                    </connections>
+                    <navigationItem title="Households" id="94" key="navigationItem"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qh2-T1-AhA" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="653" y="-138"/>
+        </scene>
+        <!--class Prefix:identifier Second View Controller - Second-->
+        <scene sceneID="ot8-2e-RuS">
+            <objects>
+                <viewController id="QUy-BD-bpt" customClass="CheckinViewController" sceneMemberID="viewController" storyboardIdentifier="CheckinViewController" restorationIdentifier="CheckinViewController" title="Scan">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7"/>
+                        <viewControllerLayoutGuide type="bottom" id="8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gMD-aP-Fq6">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Scan" image="1020-barcode.png" id="Z7h-1E-pvt"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3qq-4t-Ow8" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="653" y="498"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Vex-rW-GRa">
+            <objects>
+                <tabBarController id="8YX-ce-x5E" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="JQR-rB-NYL">
+                        <rect key="frame" x="0.0" y="519" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="83" kind="relationship" relationship="viewControllers" id="98"/>
+                        <segue destination="QUy-BD-bpt" kind="relationship" relationship="viewControllers" id="102"/>
+                        <segue destination="12" kind="relationship" relationship="viewControllers" id="104"/>
+                        <segue destination="22" kind="relationship" relationship="viewControllers" id="106"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FNP-y4-bzi" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138" y="869"/>
+        </scene>
+        <scene sceneID="11">
+            <objects>
+                <viewController id="12" sceneMemberID="viewController" customClass="KidsInCareViewController" restorationIdentifier="KidsInCareViewController" storyboardIdentifier="KidsInCareViewController" title="Kids in Care">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9"/>
+                        <viewControllerLayoutGuide type="bottom" id="10"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="13">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="478" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES">
+                                <rect key="frame" x="0.0" y="120" width="320" height="400"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="479">
+                                        <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="480" tableViewCell="479">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="481">
+                                        <rect key="frame" x="0.0" y="66" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="482" tableViewCell="481">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="483">
+                                        <rect key="frame" x="0.0" y="110" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="484" tableViewCell="483">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="491" misplaced="YES">
+                                <rect key="frame" x="98" y="80" width="123" height="29"/>
+                                <segments>
+                                    <segment title="In"/>
+                                    <segment title="Out"/>
+                                </segments>
+                            </segmentedControl>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="499">
+                                <rect key="frame" x="0.0" y="43" width="320" height="29"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title=""/>
+                                </segments>
+                            </segmentedControl>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="478" firstAttribute="top" secondItem="9" secondAttribute="bottom" constant="100" id="485"/>
+                            <constraint firstItem="478" firstAttribute="trailing" secondItem="13" secondAttribute="trailing" constant="0.0" id="486"/>
+                            <constraint firstItem="478" firstAttribute="leading" secondItem="13" secondAttribute="leading" constant="0.0" id="487"/>
+                            <constraint firstItem="478" firstAttribute="bottom" secondItem="10" secondAttribute="top" constant="0.0" id="488"/>
+                            <constraint firstItem="491" firstAttribute="centerX" secondItem="13" secondAttribute="centerX" constant="0.0" id="495"/>
+                            <constraint firstItem="499" firstAttribute="top" secondItem="9" secondAttribute="bottom" constant="23" id="502"/>
+                            <constraint firstItem="499" firstAttribute="centerX" secondItem="13" secondAttribute="centerX" constant="0.0" id="503"/>
+                            <constraint firstItem="499" firstAttribute="trailing" secondItem="13" secondAttribute="trailing" constant="0.0" id="504"/>
+                            <constraint firstItem="499" firstAttribute="leading" secondItem="13" secondAttribute="leading" constant="0.0" id="505"/>
+                            <constraint firstItem="491" firstAttribute="top" secondItem="9" secondAttribute="bottom" constant="60" id="512"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Kids in Care" id="16" image="1100-list-2.png"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="tvChildren" destination="478" id="name-outlet-478"/>
+                        <outlet property="segEvent" destination="499" id="name-outlet-499"/>
+                        <outlet property="segStatus" destination="491" id="name-outlet-491"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="14" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="655" y="1153"/>
+        </scene>
+        <scene sceneID="21">
+            <objects>
+                <viewController id="22" sceneMemberID="viewController" customClass="SettingsViewController" storyboardIdentifier="SettingsViewController" restorationIdentifier="SettingsViewController" title="Settings">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="19"/>
+                        <viewControllerLayoutGuide type="bottom" id="20"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="23">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" id="529" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES">
+                                <rect key="frame" x="0.0" y="20" width="320" height="216"/>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="560" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES">
+                                <rect key="frame" x="85" y="221" width="151" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <state key="normal" title="Update Printer">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="570" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES">
+                                <rect key="frame" x="99" y="259" width="126" height="30"/>
+                                <state key="normal" title="Sync Database">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="771" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES">
+                                <rect key="frame" x="99" y="297" width="126" height="30"/>
+                                <state key="normal" title="Print All Labels">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="529" firstAttribute="centerX" secondItem="23" secondAttribute="centerX" constant="0.0" id="531"/>
+                            <constraint firstItem="560" firstAttribute="top" secondItem="19" secondAttribute="bottom" constant="201" id="561"/>
+                            <constraint firstItem="560" firstAttribute="centerX" secondItem="23" secondAttribute="centerX" constant="0.0" id="562"/>
+                            <constraint firstItem="570" firstAttribute="top" secondItem="19" secondAttribute="bottom" constant="239" id="571"/>
+                            <constraint firstItem="570" firstAttribute="centerX" secondItem="23" secondAttribute="centerX" constant="2" id="572"/>
+                            <constraint firstItem="771" firstAttribute="top" secondItem="19" secondAttribute="bottom" constant="277" id="772"/>
+                            <constraint firstItem="771" firstAttribute="centerX" secondItem="23" secondAttribute="centerX" constant="2" id="773"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Settings" id="26" image="912-gears.png"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="pvPrinter" destination="529" id="name-outlet-529"/>
+                        <outlet property="btnUpdate" destination="560" id="name-outlet-560"/>
+                        <outlet property="btnSync" destination="570" id="name-outlet-570"/>
+                        <outlet property="btnPrintAllLabels" destination="771" id="name-outlet-771"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="24" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="653" y="1776"/>
+        </scene>
+        <scene sceneID="75">
+            <objects>
+                <viewController id="76" sceneMemberID="viewController" customClass="HouseholdDetailViewController" storyboardIdentifier="HouseholdDetailViewController" restorationIdentifier="HouseholdDetailViewController" title="Add Household">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="73"/>
+                        <viewControllerLayoutGuide type="bottom" id="74"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="77">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Spouse 1" lineBreakMode="tailTruncation" minimumFontSize="10" id="142" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES">
+                                <rect key="frame" x="20" y="40" width="88" height="21"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="88" id="147"/>
+                                </constraints>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Spouse 2" lineBreakMode="tailTruncation" minimumFontSize="10" id="150" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES">
+                                <rect key="frame" x="20" y="80" width="88" height="21"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="88" id="151"/>
+                                </constraints>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Child 1" lineBreakMode="tailTruncation" minimumFontSize="10" id="158" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES">
+                                <rect key="frame" x="20" y="120" width="88" height="21"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="88" id="159"/>
+                                </constraints>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Child 2" lineBreakMode="tailTruncation" minimumFontSize="10" id="162" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES">
+                                <rect key="frame" x="20" y="160" width="88" height="21"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="88" id="163"/>
+                                </constraints>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Child 3" lineBreakMode="tailTruncation" minimumFontSize="10" id="166" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES">
+                                <rect key="frame" x="20" y="200" width="88" height="21"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="88" id="167"/>
+                                </constraints>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Child 4" lineBreakMode="tailTruncation" minimumFontSize="10" id="170" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES">
+                                <rect key="frame" x="20" y="240" width="88" height="21"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="88" id="171"/>
+                                </constraints>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Child 5" lineBreakMode="tailTruncation" minimumFontSize="10" id="174" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES">
+                                <rect key="frame" x="20" y="280" width="88" height="21"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="88" id="175"/>
+                                </constraints>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" id="180" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES">
+                                <rect key="frame" x="286" y="40" width="23" height="23"/>
+                                <color key="tintColor" colorSpace="calibratedRGB" red="0" green="1" blue="0" alpha="1"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" colorSpace="calibratedRGB" red="0.19215686274509805" green="0.30588235294117649" blue="0.52156862745098043" alpha="1"/>
+                                </state>
+                                <state key="highlighted"/>
+                                <state key="selected"/>
+                                <state key="disabled"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" id="185" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES">
+                                <rect key="frame" x="286" y="80" width="23" height="23"/>
+                                <color key="tintColor" colorSpace="calibratedRGB" red="0" green="1" blue="0" alpha="1"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" colorSpace="calibratedRGB" red="0.19215686274509805" green="0.30588235294117649" blue="0.52156862745098043" alpha="1"/>
+                                </state>
+                                <state key="highlighted"/>
+                                <state key="selected"/>
+                                <state key="disabled"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" id="189" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES">
+                                <rect key="frame" x="286" y="120" width="23" height="23"/>
+                                <color key="tintColor" colorSpace="calibratedRGB" red="0" green="1" blue="0" alpha="1"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" colorSpace="calibratedRGB" red="0.19215686274509805" green="0.30588235294117649" blue="0.52156862745098043" alpha="1"/>
+                                </state>
+                                <state key="highlighted"/>
+                                <state key="selected"/>
+                                <state key="disabled"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" id="195" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES">
+                                <rect key="frame" x="286" y="160" width="23" height="23"/>
+                                <color key="tintColor" colorSpace="calibratedRGB" red="0" green="1" blue="0" alpha="1"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted"/>
+                                <state key="selected"/>
+                                <state key="disabled"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" id="198" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES">
+                                <rect key="frame" x="286" y="200" width="23" height="23"/>
+                                <color key="tintColor" colorSpace="calibratedRGB" red="0" green="1" blue="0" alpha="1"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted"/>
+                                <state key="selected"/>
+                                <state key="disabled"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" id="201" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES">
+                                <rect key="frame" x="286" y="240" width="23" height="23"/>
+                                <color key="tintColor" colorSpace="calibratedRGB" red="0" green="1" blue="0" alpha="1"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted"/>
+                                <state key="selected"/>
+                                <state key="disabled"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" id="204" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES">
+                                <rect key="frame" x="286" y="280" width="23" height="23"/>
+                                <color key="tintColor" colorSpace="calibratedRGB" red="0" green="1" blue="0" alpha="1"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted"/>
+                                <state key="selected"/>
+                                <state key="disabled"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="215" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="100" y="40" width="180" height="21"/>
+                                <state key="normal" title="John Doe">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="180" id="218"/>
+                                    <constraint firstAttribute="height" constant="21" id="219"/>
+                                </constraints>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="222" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="100" y="80" width="180" height="21"/>
+                                <state key="normal" title="John Doe">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="180" id="223"/>
+                                    <constraint firstAttribute="height" constant="21" id="224"/>
+                                </constraints>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="227" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="125" y="120" width="150" height="21"/>
+                                <state key="normal" title="John Doe">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="228"/>
+                                    <constraint firstAttribute="height" constant="21" id="229"/>
+                                </constraints>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="231" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="125" y="160" width="150" height="21"/>
+                                <state key="normal" title="John Doe">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="232"/>
+                                    <constraint firstAttribute="height" constant="21" id="233"/>
+                                </constraints>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="236" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="125" y="200" width="150" height="21"/>
+                                <state key="normal" title="John Doe">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="237"/>
+                                    <constraint firstAttribute="height" constant="21" id="238"/>
+                                </constraints>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="241" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="125" y="240" width="150" height="21"/>
+                                <state key="normal" title="John Doe">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="242"/>
+                                    <constraint firstAttribute="height" constant="21" id="243"/>
+                                </constraints>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="246" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="125" y="280" width="150" height="21"/>
+                                <state key="normal" title="John Doe">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="247"/>
+                                    <constraint firstAttribute="height" constant="21" id="248"/>
+                                </constraints>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="404" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="85" y="120" width="28" height="28"/>
+                                <state key="normal" title="Button" image="1040-checkmark.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <constraints>
+                                    <constraint id="408" firstAttribute="width" constant="28"/>
+                                    <constraint id="409" firstAttribute="height" constant="28"/>
+                                </constraints>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="422" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES">
+                                <rect key="frame" x="126" y="321" width="68" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <state key="normal" title="Print">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="427" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES">
+                                <rect key="frame" x="85" y="156" width="28" height="28"/>
+                                <state key="normal" title="Button" image="1040-checkmark.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <constraints>
+                                    <constraint id="428" firstAttribute="width" constant="28"/>
+                                    <constraint id="429" firstAttribute="height" constant="28"/>
+                                </constraints>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="434" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="85" y="200" width="28" height="28"/>
+                                <state key="normal" title="Button" image="1040-checkmark.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <constraints>
+                                    <constraint id="435" firstAttribute="width" constant="28"/>
+                                    <constraint id="436" firstAttribute="height" constant="28"/>
+                                </constraints>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="439" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="85" y="240" width="28" height="28"/>
+                                <state key="normal" title="Button" image="1040-checkmark.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <constraints>
+                                    <constraint id="440" firstAttribute="width" constant="28"/>
+                                    <constraint id="441" firstAttribute="height" constant="28"/>
+                                </constraints>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="444" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="85" y="280" width="28" height="28"/>
+                                <state key="normal" title="Button" image="1040-checkmark.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <constraints>
+                                    <constraint id="445" firstAttribute="width" constant="28"/>
+                                    <constraint id="446" firstAttribute="height" constant="28"/>
+                                </constraints>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="589" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES">
+                                <rect key="frame" x="100" y="359" width="114" height="30"/>
+                                <state key="normal" title="Snap Indemnity">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="142" firstAttribute="top" secondItem="73" secondAttribute="bottom" constant="20" id="148"/>
+                            <constraint firstItem="77" firstAttribute="centerX" secondItem="142" secondAttribute="centerX" constant="100" id="149"/>
+                            <constraint firstItem="150" firstAttribute="top" secondItem="73" secondAttribute="bottom" constant="60" id="152"/>
+                            <constraint firstItem="77" firstAttribute="centerX" secondItem="150" secondAttribute="centerX" constant="100" id="153"/>
+                            <constraint firstItem="77" firstAttribute="centerX" secondItem="158" secondAttribute="centerX" constant="100" id="160"/>
+                            <constraint firstItem="158" firstAttribute="top" secondItem="73" secondAttribute="bottom" constant="100" id="161"/>
+                            <constraint firstItem="162" firstAttribute="top" secondItem="73" secondAttribute="bottom" constant="140" id="164"/>
+                            <constraint firstItem="77" firstAttribute="centerX" secondItem="162" secondAttribute="centerX" constant="100" id="165"/>
+                            <constraint firstItem="166" firstAttribute="top" secondItem="73" secondAttribute="bottom" constant="180" id="168"/>
+                            <constraint firstItem="77" firstAttribute="centerX" secondItem="166" secondAttribute="centerX" constant="100" id="169"/>
+                            <constraint firstItem="170" firstAttribute="top" secondItem="73" secondAttribute="bottom" constant="220" id="172"/>
+                            <constraint firstItem="77" firstAttribute="centerX" secondItem="170" secondAttribute="centerX" constant="100" id="173"/>
+                            <constraint firstItem="174" firstAttribute="top" secondItem="73" secondAttribute="bottom" constant="260" id="176"/>
+                            <constraint firstItem="77" firstAttribute="centerX" secondItem="174" secondAttribute="centerX" constant="100" id="177"/>
+                            <constraint firstItem="180" firstAttribute="top" secondItem="73" secondAttribute="bottom" constant="20" id="181"/>
+                            <constraint firstItem="180" firstAttribute="centerX" secondItem="77" secondAttribute="centerX" constant="135" id="182"/>
+                            <constraint firstItem="185" firstAttribute="top" secondItem="73" secondAttribute="bottom" constant="60" id="186"/>
+                            <constraint firstItem="185" firstAttribute="centerX" secondItem="77" secondAttribute="centerX" constant="135" id="187"/>
+                            <constraint firstItem="189" firstAttribute="top" secondItem="73" secondAttribute="bottom" constant="100" id="190"/>
+                            <constraint firstItem="189" firstAttribute="centerX" secondItem="77" secondAttribute="centerX" constant="135" id="191"/>
+                            <constraint firstItem="195" firstAttribute="top" secondItem="73" secondAttribute="bottom" constant="140" id="196"/>
+                            <constraint firstItem="195" firstAttribute="centerX" secondItem="77" secondAttribute="centerX" constant="135" id="197"/>
+                            <constraint firstItem="198" firstAttribute="top" secondItem="73" secondAttribute="bottom" constant="180" id="199"/>
+                            <constraint firstItem="198" firstAttribute="centerX" secondItem="77" secondAttribute="centerX" constant="135" id="200"/>
+                            <constraint firstItem="201" firstAttribute="top" secondItem="73" secondAttribute="bottom" constant="220" id="202"/>
+                            <constraint firstItem="201" firstAttribute="centerX" secondItem="77" secondAttribute="centerX" constant="135" id="203"/>
+                            <constraint firstItem="204" firstAttribute="centerX" secondItem="77" secondAttribute="centerX" constant="135" id="206"/>
+                            <constraint firstItem="204" firstAttribute="top" secondItem="73" secondAttribute="bottom" constant="260" id="207"/>
+                            <constraint firstItem="215" firstAttribute="top" secondItem="73" secondAttribute="bottom" constant="20" id="220"/>
+                            <constraint firstItem="215" firstAttribute="centerX" secondItem="77" secondAttribute="centerX" constant="30" id="221"/>
+                            <constraint firstItem="222" firstAttribute="top" secondItem="73" secondAttribute="bottom" constant="60" id="225"/>
+                            <constraint firstItem="222" firstAttribute="centerX" secondItem="77" secondAttribute="centerX" constant="30" id="226"/>
+                            <constraint firstItem="227" firstAttribute="top" secondItem="73" secondAttribute="bottom" constant="100" id="230"/>
+                            <constraint firstItem="231" firstAttribute="top" secondItem="73" secondAttribute="bottom" constant="140" id="234"/>
+                            <constraint firstItem="231" firstAttribute="centerX" secondItem="77" secondAttribute="centerX" constant="40" id="235"/>
+                            <constraint firstItem="236" firstAttribute="top" secondItem="73" secondAttribute="bottom" constant="180" id="239"/>
+                            <constraint firstItem="236" firstAttribute="centerX" secondItem="77" secondAttribute="centerX" constant="40" id="240"/>
+                            <constraint firstItem="241" firstAttribute="top" secondItem="73" secondAttribute="bottom" constant="220" id="244"/>
+                            <constraint firstItem="241" firstAttribute="centerX" secondItem="77" secondAttribute="centerX" constant="40" id="245"/>
+                            <constraint firstItem="246" firstAttribute="top" secondItem="73" secondAttribute="bottom" constant="260" id="249"/>
+                            <constraint firstItem="246" firstAttribute="centerX" secondItem="77" secondAttribute="centerX" constant="40" id="250"/>
+                            <constraint firstItem="227" firstAttribute="centerX" secondItem="77" secondAttribute="centerX" constant="40" id="254"/>
+                            <constraint firstItem="404" firstAttribute="top" secondItem="73" secondAttribute="bottom" constant="100" id="410"/>
+                            <constraint firstItem="422" firstAttribute="top" secondItem="73" secondAttribute="bottom" constant="300" id="423"/>
+                            <constraint firstItem="422" firstAttribute="centerX" secondItem="77" secondAttribute="centerX" constant="0.0" id="424"/>
+                            <constraint firstItem="427" firstAttribute="top" secondItem="73" secondAttribute="bottom" constant="140" id="432"/>
+                            <constraint firstItem="434" firstAttribute="top" secondItem="73" secondAttribute="bottom" constant="180" id="437"/>
+                            <constraint firstItem="439" firstAttribute="top" secondItem="73" secondAttribute="bottom" constant="220" id="442"/>
+                            <constraint firstItem="444" firstAttribute="top" secondItem="73" secondAttribute="bottom" constant="260" id="447"/>
+                            <constraint firstItem="77" firstAttribute="centerX" secondItem="404" secondAttribute="centerX" constant="61" id="461"/>
+                            <constraint firstItem="77" firstAttribute="centerX" secondItem="427" secondAttribute="centerX" constant="61" id="462"/>
+                            <constraint firstItem="77" firstAttribute="centerX" secondItem="434" secondAttribute="centerX" constant="61" id="463"/>
+                            <constraint firstItem="77" firstAttribute="centerX" secondItem="439" secondAttribute="centerX" constant="61" id="464"/>
+                            <constraint firstItem="77" firstAttribute="centerX" secondItem="444" secondAttribute="centerX" constant="61" id="465"/>
+                            <constraint firstItem="589" firstAttribute="top" secondItem="73" secondAttribute="bottom" constant="339" id="590"/>
+                            <constraint firstItem="77" firstAttribute="centerX" secondItem="589" secondAttribute="centerX" constant="0.0" id="591"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btnSpouse1" destination="180" id="name-outlet-180"/>
+                        <outlet property="btnSpouse2" destination="185" id="name-outlet-185"/>
+                        <outlet property="btnChild1" destination="189" id="name-outlet-189"/>
+                        <outlet property="btnChild2" destination="195" id="name-outlet-195"/>
+                        <outlet property="btnChild3" destination="198" id="name-outlet-198"/>
+                        <outlet property="btnChild4" destination="201" id="name-outlet-201"/>
+                        <outlet property="btnChild5" destination="204" id="name-outlet-204"/>
+                        <outlet property="btnSpouse1Detail" destination="215" id="name-outlet-215"/>
+                        <outlet property="btnSpouse2Detail" destination="222" id="name-outlet-222"/>
+                        <outlet property="btnChild1Detail" destination="227" id="name-outlet-227"/>
+                        <outlet property="btnChild2Detail" destination="231" id="name-outlet-231"/>
+                        <outlet property="btnChild3Detail" destination="236" id="name-outlet-236"/>
+                        <outlet property="btnChild4Detail" destination="241" id="name-outlet-241"/>
+                        <outlet property="btnChild5Detail" destination="246" id="name-outlet-246"/>
+                        <outlet property="btnCheck1" destination="404" id="name-outlet-404"/>
+                        <outlet property="btnPrint" destination="422" id="name-outlet-422"/>
+                        <outlet property="btnCheck2" destination="427" id="name-outlet-427"/>
+                        <outlet property="btnCheck3" destination="434" id="name-outlet-434"/>
+                        <outlet property="btnCheck4" destination="439" id="name-outlet-439"/>
+                        <outlet property="btnCheck5" destination="444" id="name-outlet-444"/>
+                        <outlet property="btnSaveIndemnity" destination="589" id="name-outlet-589"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="78" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1021" y="-138"/>
+        </scene>
+        <scene sceneID="82">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="83" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="86">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="CZ4-MO-1fc" kind="relationship" relationship="rootViewController" id="95"/>
+                    </connections>
+                    <tabBarItem key="tabBarItem" title="Households" id="97" image="974-users.png"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="87" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="45" y="148"/>
+        </scene>
+        <scene sceneID="266">
+            <objects>
+                <viewController id="267" sceneMemberID="viewController" customClass="PersonViewController" storyboardIdentifier="PersonViewController" restorationIdentifier="PersonViewController" title="Person">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="264"/>
+                        <viewControllerLayoutGuide type="bottom" id="265"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="268">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="" borderStyle="roundedRect" minimumFontSize="17" id="277" translatesAutoresizingMaskIntoConstraints="NO" placeholder="First Name(s)">
+                                <rect key="frame" x="7" y="30" width="150" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" spellCheckingType="no" returnKeyType="done"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="280"/>
+                                </constraints>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="" borderStyle="roundedRect" minimumFontSize="17" id="287" translatesAutoresizingMaskIntoConstraints="NO" placeholder="Last Name">
+                                <rect key="frame" x="163" y="30" width="150" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" spellCheckingType="no" returnKeyType="done"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="288"/>
+                                </constraints>
+                            </textField>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="293" misplaced="YES">
+                                <rect key="frame" x="98" y="110" width="123" height="29"/>
+                                <segments>
+                                    <segment title="Female"/>
+                                    <segment title="Male"/>
+                                </segments>
+                            </segmentedControl>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" id="299" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES">
+                                <rect key="frame" x="0.0" y="140" width="320" height="216"/>
+                                <date key="date" timeIntervalSinceReferenceDate="332704801.65417802">
+                                    <!--2011-07-18 18:00:01 +0000-->
+                                </date>
+                            </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="314" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES">
+                                <rect key="frame" x="130" y="355" width="69" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <state key="normal" title="Update">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="" borderStyle="roundedRect" minimumFontSize="17" id="382" translatesAutoresizingMaskIntoConstraints="NO" placeholder="EMail Address">
+                                <rect key="frame" x="7" y="70" width="150" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" spellCheckingType="no" keyboardType="emailAddress" returnKeyType="done"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="383"/>
+                                </constraints>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="" borderStyle="roundedRect" minimumFontSize="17" id="386" translatesAutoresizingMaskIntoConstraints="NO" placeholder="Mobile Number">
+                                <rect key="frame" x="163" y="70" width="150" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" spellCheckingType="no" keyboardType="numbersAndPunctuation" returnKeyType="done"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="387"/>
+                                </constraints>
+                            </textField>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="277" firstAttribute="top" secondItem="264" secondAttribute="bottom" constant="10" id="281"/>
+                            <constraint firstItem="287" firstAttribute="centerX" secondItem="268" secondAttribute="centerX" constant="78" id="289"/>
+                            <constraint firstItem="287" firstAttribute="top" secondItem="264" secondAttribute="bottom" constant="10" id="290"/>
+                            <constraint firstItem="293" firstAttribute="top" secondItem="264" secondAttribute="bottom" constant="90" id="296"/>
+                            <constraint firstItem="293" firstAttribute="centerX" secondItem="268" secondAttribute="centerX" constant="0.0" id="297"/>
+                            <constraint firstItem="299" firstAttribute="centerX" secondItem="268" secondAttribute="centerX" constant="0.0" id="300"/>
+                            <constraint firstItem="299" firstAttribute="top" secondItem="264" secondAttribute="bottom" constant="120" id="301"/>
+                            <constraint firstItem="314" firstAttribute="centerX" secondItem="268" secondAttribute="centerX" constant="0.0" id="315"/>
+                            <constraint firstItem="314" firstAttribute="top" secondItem="264" secondAttribute="bottom" constant="335" id="316"/>
+                            <constraint firstItem="314" firstAttribute="centerX" secondItem="268" secondAttribute="centerX" constant="0.0" id="317"/>
+                            <constraint firstItem="268" firstAttribute="centerX" secondItem="277" secondAttribute="centerX" constant="78" id="377"/>
+                            <constraint firstItem="382" firstAttribute="top" secondItem="264" secondAttribute="bottom" constant="50" id="384"/>
+                            <constraint firstItem="268" firstAttribute="centerX" secondItem="382" secondAttribute="centerX" constant="78" id="385"/>
+                            <constraint firstItem="386" firstAttribute="top" secondItem="264" secondAttribute="bottom" constant="50" id="390"/>
+                            <constraint firstItem="386" firstAttribute="centerX" secondItem="268" secondAttribute="centerX" constant="78" id="391"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="txtFirstName" destination="277" id="name-outlet-277"/>
+                        <outlet property="segGender" destination="293" id="name-outlet-293"/>
+                        <outlet property="dpDoB" destination="299" id="name-outlet-299"/>
+                        <outlet property="txtSurname" destination="287" id="name-outlet-287"/>
+                        <outlet property="btnUpdate" destination="314" id="name-outlet-314"/>
+                        <outlet property="txtEMail" destination="382" id="name-outlet-382"/>
+                        <outlet property="txtMobile" destination="386" id="name-outlet-386"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="269" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1370" y="-138"/>
+        </scene>
+        <scene sceneID="594">
+            <objects>
+                <viewController id="595" sceneMemberID="viewController" customClass="SnapIndemnityViewController" storyboardIdentifier="SnapIndemnityViewController" restorationIdentifier="SnapIndemnityViewController" title="Snap Indemnity">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="592"/>
+                        <viewControllerLayoutGuide type="bottom" id="593"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="596">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="597" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1030" y="497"/>
+        </scene>
+        <scene sceneID="659">
+            <objects>
+                <viewController id="660" sceneMemberID="viewController" customClass="ChildViewController" storyboardIdentifier="ChildViewController" restorationIdentifier="ChildViewController" title="Child">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="657"/>
+                        <viewControllerLayoutGuide type="bottom" id="658"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="661">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="" borderStyle="roundedRect" minimumFontSize="17" id="664" translatesAutoresizingMaskIntoConstraints="NO" placeholder="First Name(s)">
+                                <rect key="frame" x="7" y="30" width="150" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" spellCheckingType="no" returnKeyType="done"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="665"/>
+                                </constraints>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="" borderStyle="roundedRect" minimumFontSize="17" id="670" translatesAutoresizingMaskIntoConstraints="NO" placeholder="Last Name">
+                                <rect key="frame" x="163" y="30" width="150" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" spellCheckingType="no" returnKeyType="done"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="671"/>
+                                </constraints>
+                            </textField>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="674" misplaced="YES">
+                                <rect key="frame" x="98" y="68" width="123" height="29"/>
+                                <segments>
+                                    <segment title="Female"/>
+                                    <segment title="Male"/>
+                                </segments>
+                            </segmentedControl>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" id="679" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES">
+                                <rect key="frame" x="0.0" y="106" width="240" height="216"/>
+                                <date key="date" timeIntervalSinceReferenceDate="332704801.65417802">
+                                    <!--2011-07-18 18:00:01 +0000-->
+                                </date>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="713"/>
+                                    <constraint firstAttribute="height" constant="216" id="714"/>
+                                </constraints>
+                            </datePicker>
+                            <pickerView contentMode="scaleToFill" id="682" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES">
+                                <rect key="frame" x="240" y="106" width="80" height="216"/>
+                                <constraints>
+                                    <constraint firstItem="682" firstAttribute="width" constant="80" id="688"/>
+                                </constraints>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="685" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES">
+                                <rect key="frame" x="126" y="320" width="69" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <state key="normal" title="Update">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="664" firstAttribute="top" secondItem="657" secondAttribute="bottom" constant="10" id="666"/>
+                            <constraint firstItem="661" firstAttribute="centerX" secondItem="664" secondAttribute="centerX" constant="78" id="669"/>
+                            <constraint firstItem="670" firstAttribute="top" secondItem="657" secondAttribute="bottom" constant="10" id="672"/>
+                            <constraint firstItem="670" firstAttribute="centerX" secondItem="661" secondAttribute="centerX" constant="78" id="673"/>
+                            <constraint firstItem="674" firstAttribute="top" secondItem="657" secondAttribute="bottom" constant="50" id="677"/>
+                            <constraint firstItem="674" firstAttribute="centerX" secondItem="661" secondAttribute="centerX" constant="0.0" id="678"/>
+                            <constraint firstItem="682" firstAttribute="top" secondItem="657" secondAttribute="bottom" constant="90" id="683"/>
+                            <constraint firstItem="685" firstAttribute="top" secondItem="657" secondAttribute="bottom" constant="310" id="686"/>
+                            <constraint firstItem="685" firstAttribute="centerX" secondItem="661" secondAttribute="centerX" constant="0.0" id="687"/>
+                            <constraint firstItem="679" firstAttribute="top" secondItem="657" secondAttribute="bottom" constant="90" id="715"/>
+                            <constraint firstItem="679" firstAttribute="leading" secondItem="661" secondAttribute="leading" constant="0.0" id="716"/>
+                            <constraint firstItem="682" firstAttribute="trailing" secondItem="661" secondAttribute="trailing" constant="0.0" id="717"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="txtFirstName" destination="664" id="name-outlet-664"/>
+                        <outlet property="txtSurname" destination="670" id="name-outlet-670"/>
+                        <outlet property="segGender" destination="674" id="name-outlet-674"/>
+                        <outlet property="dpDoB" destination="679" id="name-outlet-679"/>
+                        <outlet property="pvGrade" destination="682" id="name-outlet-682"/>
+                        <outlet property="btnUpdate" destination="685" id="name-outlet-685"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="662" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1703" y="-136"/>
+        </scene>
+        <scene sceneID="740">
+            <objects>
+                <viewController id="741" sceneMemberID="viewController" customClass="ImageViewController" storyboardIdentifier="ImageViewController" restorationIdentifier="ImageViewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="738"/>
+                        <viewControllerLayoutGuide type="bottom" id="739"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="742">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" id="745" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES" scalesPageToFit="YES">
+                                <rect key="frame" x="0.0" y="28" width="320" height="540"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </webView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="745" firstAttribute="top" secondItem="738" secondAttribute="bottom" constant="0.0" id="746"/>
+                            <constraint firstItem="745" firstAttribute="leading" secondItem="742" secondAttribute="leading" constant="0.0" id="747"/>
+                            <constraint firstItem="745" firstAttribute="trailing" secondItem="742" secondAttribute="trailing" constant="0.0" id="748"/>
+                            <constraint firstItem="745" firstAttribute="bottom" secondItem="739" secondAttribute="top" constant="0.0" id="749"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="wvImage" destination="745" id="name-outlet-745"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="743" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1404" y="501"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="first" width="16" height="16"/>
+        <image name="second" width="16" height="16"/>
+        <image name="Default-568h.png" width="640" height="1136"/>
+        <image name="first.png" width="30" height="30"/>
+        <image name="second.png" width="30" height="30"/>
+        <image name="974-users.png" width="28" height="18"/>
+        <image name="1020-barcode.png" width="28" height="22"/>
+        <image name="1100-list-2.png" width="28" height="22"/>
+        <image name="912-gears.png" width="28" height="28"/>
+        <image name="1040-checkmark.png" width="28" height="26"/>
+        <image name="1040-checkmark-selected.png" width="28" height="26"/>
+        <image name="Icon.png" width="57" height="57"/>
+        <image name="Icon-60.png" width="120" height="120"/>
+        <image name="Icon-76.png" width="76" height="76"/>
+        <image name="Icon-72.png" width="72" height="72"/>
+        <image name="Default.png" width="320" height="480"/>
+        <image name="Default-Portrait.png" width="768" height="1004"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

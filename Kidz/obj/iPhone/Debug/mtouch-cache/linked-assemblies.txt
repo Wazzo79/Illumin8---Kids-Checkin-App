@@ -1,0 +1,10 @@
+/Users/warrenschwartz/Google Drive/Projects/Illumin8/Kidz/obj/iPhone/Debug/mtouch-cache/Link/Kidz.exe
+/Users/warrenschwartz/Google Drive/Projects/Illumin8/Kidz/obj/iPhone/Debug/mtouch-cache/Link/ScanditSDK.dll
+/Users/warrenschwartz/Google Drive/Projects/Illumin8/Kidz/obj/iPhone/Debug/mtouch-cache/Link/System.Web.Services.dll
+/Users/warrenschwartz/Google Drive/Projects/Illumin8/Kidz/obj/iPhone/Debug/mtouch-cache/Link/System.Xml.dll
+/Users/warrenschwartz/Google Drive/Projects/Illumin8/Kidz/obj/iPhone/Debug/mtouch-cache/Link/System.dll
+/Users/warrenschwartz/Google Drive/Projects/Illumin8/Kidz/obj/iPhone/Debug/mtouch-cache/Link/Zumero_iOS.dll
+/Users/warrenschwartz/Google Drive/Projects/Illumin8/Kidz/obj/iPhone/Debug/mtouch-cache/Link/SQLite.dll
+/Users/warrenschwartz/Google Drive/Projects/Illumin8/Kidz/obj/iPhone/Debug/mtouch-cache/Link/mscorlib.dll
+/Users/warrenschwartz/Google Drive/Projects/Illumin8/Kidz/obj/iPhone/Debug/mtouch-cache/Link/System.Core.dll
+/Users/warrenschwartz/Google Drive/Projects/Illumin8/Kidz/obj/iPhone/Debug/mtouch-cache/Link/monotouch.dll

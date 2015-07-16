@@ -1,0 +1,38 @@
+# Version: 8.6.0.51 (dfb682f)
+# [first argument, ignore] # /Users/warren/Projects/Illumin8/Kidz/bin/iPhone/Ad-Hoc/mtouch.exe
+/Library/Frameworks/Xamarin.iOS.framework/Versions/8.6.0.51/bin/mtouch-64 \
+	-sdkroot \
+	/Applications/Xcode.app/Contents/Developer \
+	--cache \
+	/Users/warren/Projects/Illumin8/Kidz/obj/iPhone/Ad-Hoc/mtouch-cache \
+	--executable \
+	Kidz \
+	--nomanifest \
+	--nosign \
+	-dev \
+	/Users/warren/Projects/Illumin8/Kidz/bin/iPhone/Ad-Hoc/Kidz.app \
+	-r \
+	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/2.1/System.dll \
+	-r \
+	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/2.1/System.Xml.dll \
+	-r \
+	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/2.1/System.Core.dll \
+	-r \
+	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/2.1/monotouch.dll \
+	-r \
+	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/2.1/System.Web.Services.dll \
+	-r \
+	/Users/warren/Projects/Illumin8/Components/zumero-1.5.0.2157/lib/ios/Zumero_iOS.dll \
+	-r \
+	/Users/warren/Projects/Illumin8/Components/sqlite-net-1.0.1/lib/ios/SQLite.dll \
+	-r \
+	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/2.1/System.Data.dll \
+	-r \
+	/Users/warren/Projects/Illumin8/Components/scandit-4.2.1/lib/ios/ScanditSDK.dll \
+	-linksdkonly \
+	-sdk \
+	8.1 \
+	-targetver \
+	7.0 \
+	--abi=armv7 \
+	/Users/warren/Projects/Illumin8/Kidz/bin/iPhone/Ad-Hoc/Kidz.exe \

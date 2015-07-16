@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<component format="1" id="zumero">
+  <name>Zumero for SQL Server</name>
+  <publisher>Zumero LLC</publisher>
+  <publisher-url>http://zumero.com/</publisher-url>
+  <version>1.5.0.2157</version>
+  <summary>Client component for accessing Zumero for SQL Server (ZSS), a mobile database sync solution.</summary>
+  <samples>
+    <sample id="SyncSample.iOS">
+      <name>Zumero sync sample for iOS.</name>
+      <summary>Demonstrates how to communicate with a ZSS Server.</summary>
+    </sample>
+    <sample id="SyncSample.Android">
+      <name>Zumero sync sample for Android.</name>
+      <summary>Demonstrates how to communicate with a ZSS Server.</summary>
+    </sample>
+  </samples>
+</component>

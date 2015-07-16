@@ -1,0 +1,879 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:s0="http://tempuri.org/" xmlns:tns="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" targetNamespace="http://tempuri.org/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xs:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="updatePerson">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="ID" type="xs:int" />
+            <xs:element minOccurs="1" maxOccurs="1" name="CampusID" type="xs:int" />
+            <xs:element minOccurs="0" maxOccurs="1" name="FirstName" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="LastName" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="Gender" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="DoB" type="xs:dateTime" />
+            <xs:element minOccurs="0" maxOccurs="1" name="Comments" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="Mobile" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="EMail" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="updatePersonResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="updatePersonResult" type="xs:int" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getPeople">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="CampusID" type="xs:int" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getPeopleResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="1" name="getPeopleResult" type="tns:ArrayOfPerson" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:complexType name="ArrayOfPerson">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="Person" nillable="true" type="tns:Person" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="Person">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="ID" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="CampusID" type="xs:int" />
+          <xs:element minOccurs="0" maxOccurs="1" name="FirstName" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="LastName" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Gender" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="DoB" type="xs:dateTime" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Comments" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Mobile" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="EMail" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IsTemporary" type="xs:boolean" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="checkinToSecureArea">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="PersonID" type="xs:int" />
+            <xs:element minOccurs="1" maxOccurs="1" name="AreaID" type="xs:int" />
+            <xs:element minOccurs="1" maxOccurs="1" name="EventID" type="xs:int" />
+            <xs:element minOccurs="1" maxOccurs="1" name="InOut" type="xs:int" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="checkinToSecureAreaResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="checkinToSecureAreaResult" type="xs:boolean" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getUpcomingEvents">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="CampusID" type="xs:int" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getUpcomingEventsResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="1" name="getUpcomingEventsResult" type="tns:ArrayOfEvent" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:complexType name="ArrayOfEvent">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="Event" nillable="true" type="tns:Event" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="Event">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="ID" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="CampusID" type="xs:int" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Description" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="StartDate" type="xs:dateTime" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="deletePerson">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="PersonID" type="xs:int" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="deletePersonResponse">
+        <xs:complexType />
+      </xs:element>
+      <xs:element name="getKidsInCare">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="Checkin" type="xs:int" />
+            <xs:element minOccurs="1" maxOccurs="1" name="EventID" type="xs:int" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getKidsInCareResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="1" name="getKidsInCareResult" type="tns:ArrayOfCareInfo" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:complexType name="ArrayOfCareInfo">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="CareInfo" nillable="true" type="tns:CareInfo" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="CareInfo">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="ClassName" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="ChildName" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Gender" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Comments" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="InStamp" type="xs:dateTime" />
+          <xs:element minOccurs="1" maxOccurs="1" name="OutStamp" type="xs:dateTime" />
+          <xs:element minOccurs="1" maxOccurs="1" name="PersonID" type="xs:int" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="getChildren">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="PersonID" type="xs:int" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getChildrenResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="1" name="getChildrenResult" type="tns:ArrayOfPerson" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getParents">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="PersonID" type="xs:int" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getParentsResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="1" name="getParentsResult" type="tns:ArrayOfPerson" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getPerson">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="PersonID" type="xs:int" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getPersonResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="1" name="getPersonResult" type="tns:Person" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getPrinters">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="CampusID" type="xs:int" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getPrintersResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="1" name="getPrintersResult" type="tns:ArrayOfPrinter" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:complexType name="ArrayOfPrinter">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="Printer" nillable="true" type="tns:Printer" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="Printer">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="ID" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="CampusID" type="xs:int" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Description" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Path" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="getPersonByName">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="1" name="firstName" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="lastName" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getPersonByNameResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="1" name="getPersonByNameResult" type="tns:Person" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getSpouse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="PersonID" type="xs:int" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getSpouseResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="1" name="getSpouseResult" type="tns:Person" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getRoles">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="CampusID" type="xs:int" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getRolesResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="1" name="getRolesResult" type="tns:ArrayOfRole" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:complexType name="ArrayOfRole">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="Role" nillable="true" type="tns:Role" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="Role">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="ID" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="ParentRoleID" type="xs:int" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Description" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="CampusID" type="xs:int" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="nameLookup">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="1" name="firstName" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="lastName" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="nameLookupResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="1" name="nameLookupResult" type="tns:ArrayOfPerson" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="createMarriedRelationship">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="spouseID1" type="xs:int" />
+            <xs:element minOccurs="1" maxOccurs="1" name="spouseID2" type="xs:int" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="createMarriedRelationshipResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="createMarriedRelationshipResult" type="xs:int" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="createParentRelationship">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="MarriedRelationshipID" type="xs:int" />
+            <xs:element minOccurs="1" maxOccurs="1" name="ChildID" type="xs:int" />
+            <xs:element minOccurs="1" maxOccurs="1" name="IsTemporary" type="xs:boolean" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="createParentRelationshipResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="createParentRelationshipResult" type="xs:int" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getSecureAreas">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="CampusID" type="xs:int" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getSecureAreasResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="1" name="getSecureAreasResult" type="tns:ArrayOfArea" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:complexType name="ArrayOfArea">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="Area" nillable="true" type="tns:Area" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="Area">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="ID" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="CampusID" type="xs:int" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Description" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IsSecure" type="xs:boolean" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="getUnsecureAreas">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="CampusID" type="xs:int" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getUnsecureAreasResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="1" name="getUnsecureAreasResult" type="tns:ArrayOfArea" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+  </types>
+  <message name="updatePersonSoapIn">
+    <part name="parameters" element="tns:updatePerson" />
+  </message>
+  <message name="updatePersonSoapOut">
+    <part name="parameters" element="tns:updatePersonResponse" />
+  </message>
+  <message name="getPeopleSoapIn">
+    <part name="parameters" element="tns:getPeople" />
+  </message>
+  <message name="getPeopleSoapOut">
+    <part name="parameters" element="tns:getPeopleResponse" />
+  </message>
+  <message name="checkinToSecureAreaSoapIn">
+    <part name="parameters" element="tns:checkinToSecureArea" />
+  </message>
+  <message name="checkinToSecureAreaSoapOut">
+    <part name="parameters" element="tns:checkinToSecureAreaResponse" />
+  </message>
+  <message name="getUpcomingEventsSoapIn">
+    <part name="parameters" element="tns:getUpcomingEvents" />
+  </message>
+  <message name="getUpcomingEventsSoapOut">
+    <part name="parameters" element="tns:getUpcomingEventsResponse" />
+  </message>
+  <message name="deletePersonSoapIn">
+    <part name="parameters" element="tns:deletePerson" />
+  </message>
+  <message name="deletePersonSoapOut">
+    <part name="parameters" element="tns:deletePersonResponse" />
+  </message>
+  <message name="getKidsInCareSoapIn">
+    <part name="parameters" element="tns:getKidsInCare" />
+  </message>
+  <message name="getKidsInCareSoapOut">
+    <part name="parameters" element="tns:getKidsInCareResponse" />
+  </message>
+  <message name="getChildrenSoapIn">
+    <part name="parameters" element="tns:getChildren" />
+  </message>
+  <message name="getChildrenSoapOut">
+    <part name="parameters" element="tns:getChildrenResponse" />
+  </message>
+  <message name="getParentsSoapIn">
+    <part name="parameters" element="tns:getParents" />
+  </message>
+  <message name="getParentsSoapOut">
+    <part name="parameters" element="tns:getParentsResponse" />
+  </message>
+  <message name="getPersonSoapIn">
+    <part name="parameters" element="tns:getPerson" />
+  </message>
+  <message name="getPersonSoapOut">
+    <part name="parameters" element="tns:getPersonResponse" />
+  </message>
+  <message name="getPrintersSoapIn">
+    <part name="parameters" element="tns:getPrinters" />
+  </message>
+  <message name="getPrintersSoapOut">
+    <part name="parameters" element="tns:getPrintersResponse" />
+  </message>
+  <message name="getPersonByNameSoapIn">
+    <part name="parameters" element="tns:getPersonByName" />
+  </message>
+  <message name="getPersonByNameSoapOut">
+    <part name="parameters" element="tns:getPersonByNameResponse" />
+  </message>
+  <message name="getSpouseSoapIn">
+    <part name="parameters" element="tns:getSpouse" />
+  </message>
+  <message name="getSpouseSoapOut">
+    <part name="parameters" element="tns:getSpouseResponse" />
+  </message>
+  <message name="getRolesSoapIn">
+    <part name="parameters" element="tns:getRoles" />
+  </message>
+  <message name="getRolesSoapOut">
+    <part name="parameters" element="tns:getRolesResponse" />
+  </message>
+  <message name="nameLookupSoapIn">
+    <part name="parameters" element="tns:nameLookup" />
+  </message>
+  <message name="nameLookupSoapOut">
+    <part name="parameters" element="tns:nameLookupResponse" />
+  </message>
+  <message name="createMarriedRelationshipSoapIn">
+    <part name="parameters" element="tns:createMarriedRelationship" />
+  </message>
+  <message name="createMarriedRelationshipSoapOut">
+    <part name="parameters" element="tns:createMarriedRelationshipResponse" />
+  </message>
+  <message name="createParentRelationshipSoapIn">
+    <part name="parameters" element="tns:createParentRelationship" />
+  </message>
+  <message name="createParentRelationshipSoapOut">
+    <part name="parameters" element="tns:createParentRelationshipResponse" />
+  </message>
+  <message name="getSecureAreasSoapIn">
+    <part name="parameters" element="tns:getSecureAreas" />
+  </message>
+  <message name="getSecureAreasSoapOut">
+    <part name="parameters" element="tns:getSecureAreasResponse" />
+  </message>
+  <message name="getUnsecureAreasSoapIn">
+    <part name="parameters" element="tns:getUnsecureAreas" />
+  </message>
+  <message name="getUnsecureAreasSoapOut">
+    <part name="parameters" element="tns:getUnsecureAreasResponse" />
+  </message>
+  <portType name="LincServiceSoap">
+    <operation name="updatePerson">
+      <input message="tns:updatePersonSoapIn" />
+      <output message="tns:updatePersonSoapOut" />
+    </operation>
+    <operation name="getPeople">
+      <input message="tns:getPeopleSoapIn" />
+      <output message="tns:getPeopleSoapOut" />
+    </operation>
+    <operation name="checkinToSecureArea">
+      <input message="tns:checkinToSecureAreaSoapIn" />
+      <output message="tns:checkinToSecureAreaSoapOut" />
+    </operation>
+    <operation name="getUpcomingEvents">
+      <input message="tns:getUpcomingEventsSoapIn" />
+      <output message="tns:getUpcomingEventsSoapOut" />
+    </operation>
+    <operation name="deletePerson">
+      <input message="tns:deletePersonSoapIn" />
+      <output message="tns:deletePersonSoapOut" />
+    </operation>
+    <operation name="getKidsInCare">
+      <input message="tns:getKidsInCareSoapIn" />
+      <output message="tns:getKidsInCareSoapOut" />
+    </operation>
+    <operation name="getChildren">
+      <input message="tns:getChildrenSoapIn" />
+      <output message="tns:getChildrenSoapOut" />
+    </operation>
+    <operation name="getParents">
+      <input message="tns:getParentsSoapIn" />
+      <output message="tns:getParentsSoapOut" />
+    </operation>
+    <operation name="getPerson">
+      <input message="tns:getPersonSoapIn" />
+      <output message="tns:getPersonSoapOut" />
+    </operation>
+    <operation name="getPrinters">
+      <input message="tns:getPrintersSoapIn" />
+      <output message="tns:getPrintersSoapOut" />
+    </operation>
+    <operation name="getPersonByName">
+      <input message="tns:getPersonByNameSoapIn" />
+      <output message="tns:getPersonByNameSoapOut" />
+    </operation>
+    <operation name="getSpouse">
+      <input message="tns:getSpouseSoapIn" />
+      <output message="tns:getSpouseSoapOut" />
+    </operation>
+    <operation name="getRoles">
+      <input message="tns:getRolesSoapIn" />
+      <output message="tns:getRolesSoapOut" />
+    </operation>
+    <operation name="nameLookup">
+      <input message="tns:nameLookupSoapIn" />
+      <output message="tns:nameLookupSoapOut" />
+    </operation>
+    <operation name="createMarriedRelationship">
+      <input message="tns:createMarriedRelationshipSoapIn" />
+      <output message="tns:createMarriedRelationshipSoapOut" />
+    </operation>
+    <operation name="createParentRelationship">
+      <input message="tns:createParentRelationshipSoapIn" />
+      <output message="tns:createParentRelationshipSoapOut" />
+    </operation>
+    <operation name="getSecureAreas">
+      <input message="tns:getSecureAreasSoapIn" />
+      <output message="tns:getSecureAreasSoapOut" />
+    </operation>
+    <operation name="getUnsecureAreas">
+      <input message="tns:getUnsecureAreasSoapIn" />
+      <output message="tns:getUnsecureAreasSoapOut" />
+    </operation>
+  </portType>
+  <binding name="LincServiceSoap" type="tns:LincServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="updatePerson">
+      <soap:operation soapAction="http://tempuri.org/updatePerson" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getPeople">
+      <soap:operation soapAction="http://tempuri.org/getPeople" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="checkinToSecureArea">
+      <soap:operation soapAction="http://tempuri.org/checkinToSecureArea" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getUpcomingEvents">
+      <soap:operation soapAction="http://tempuri.org/getUpcomingEvents" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="deletePerson">
+      <soap:operation soapAction="http://tempuri.org/deletePerson" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getKidsInCare">
+      <soap:operation soapAction="http://tempuri.org/getKidsInCare" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getChildren">
+      <soap:operation soapAction="http://tempuri.org/getChildren" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getParents">
+      <soap:operation soapAction="http://tempuri.org/getParents" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getPerson">
+      <soap:operation soapAction="http://tempuri.org/getPerson" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getPrinters">
+      <soap:operation soapAction="http://tempuri.org/getPrinters" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getPersonByName">
+      <soap:operation soapAction="http://tempuri.org/getPersonByName" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getSpouse">
+      <soap:operation soapAction="http://tempuri.org/getSpouse" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getRoles">
+      <soap:operation soapAction="http://tempuri.org/getRoles" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="nameLookup">
+      <soap:operation soapAction="http://tempuri.org/nameLookup" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="createMarriedRelationship">
+      <soap:operation soapAction="http://tempuri.org/createMarriedRelationship" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="createParentRelationship">
+      <soap:operation soapAction="http://tempuri.org/createParentRelationship" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getSecureAreas">
+      <soap:operation soapAction="http://tempuri.org/getSecureAreas" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getUnsecureAreas">
+      <soap:operation soapAction="http://tempuri.org/getUnsecureAreas" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="LincServiceSoap12" type="tns:LincServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="updatePerson">
+      <soap12:operation soapAction="http://tempuri.org/updatePerson" style="document" />
+      <input>
+        <soap12:body use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getPeople">
+      <soap12:operation soapAction="http://tempuri.org/getPeople" style="document" />
+      <input>
+        <soap12:body use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="checkinToSecureArea">
+      <soap12:operation soapAction="http://tempuri.org/checkinToSecureArea" style="document" />
+      <input>
+        <soap12:body use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getUpcomingEvents">
+      <soap12:operation soapAction="http://tempuri.org/getUpcomingEvents" style="document" />
+      <input>
+        <soap12:body use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="deletePerson">
+      <soap12:operation soapAction="http://tempuri.org/deletePerson" style="document" />
+      <input>
+        <soap12:body use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getKidsInCare">
+      <soap12:operation soapAction="http://tempuri.org/getKidsInCare" style="document" />
+      <input>
+        <soap12:body use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getChildren">
+      <soap12:operation soapAction="http://tempuri.org/getChildren" style="document" />
+      <input>
+        <soap12:body use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getParents">
+      <soap12:operation soapAction="http://tempuri.org/getParents" style="document" />
+      <input>
+        <soap12:body use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getPerson">
+      <soap12:operation soapAction="http://tempuri.org/getPerson" style="document" />
+      <input>
+        <soap12:body use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getPrinters">
+      <soap12:operation soapAction="http://tempuri.org/getPrinters" style="document" />
+      <input>
+        <soap12:body use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getPersonByName">
+      <soap12:operation soapAction="http://tempuri.org/getPersonByName" style="document" />
+      <input>
+        <soap12:body use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getSpouse">
+      <soap12:operation soapAction="http://tempuri.org/getSpouse" style="document" />
+      <input>
+        <soap12:body use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getRoles">
+      <soap12:operation soapAction="http://tempuri.org/getRoles" style="document" />
+      <input>
+        <soap12:body use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="nameLookup">
+      <soap12:operation soapAction="http://tempuri.org/nameLookup" style="document" />
+      <input>
+        <soap12:body use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="createMarriedRelationship">
+      <soap12:operation soapAction="http://tempuri.org/createMarriedRelationship" style="document" />
+      <input>
+        <soap12:body use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="createParentRelationship">
+      <soap12:operation soapAction="http://tempuri.org/createParentRelationship" style="document" />
+      <input>
+        <soap12:body use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getSecureAreas">
+      <soap12:operation soapAction="http://tempuri.org/getSecureAreas" style="document" />
+      <input>
+        <soap12:body use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getUnsecureAreas">
+      <soap12:operation soapAction="http://tempuri.org/getUnsecureAreas" style="document" />
+      <input>
+        <soap12:body use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="LincService">
+    <port name="LincServiceSoap" binding="tns:LincServiceSoap">
+      <soap:address location="http://41.185.30.157/lincservice.asmx" />
+    </port>
+    <port name="LincServiceSoap12" binding="tns:LincServiceSoap12">
+      <soap12:address location="http://41.185.30.157/lincservice.asmx" />
+    </port>
+  </service>
+</definitions>

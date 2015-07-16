@@ -1,0 +1,724 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:s0="http://tempuri.org/" xmlns:tns="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" targetNamespace="http://tempuri.org/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xs:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="getHouseholds">
+        <xs:complexType />
+      </xs:element>
+      <xs:element name="getHouseholdsResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="1" name="getHouseholdsResult" type="tns:ArrayOfHouseholdInfo" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:complexType name="ArrayOfHouseholdInfo">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="HouseholdInfo" nillable="true" type="tns:HouseholdInfo" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="HouseholdInfo">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="ID" type="xs:int" />
+          <xs:element minOccurs="0" maxOccurs="1" name="HeadSurname" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="HeadFirstNames" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="SpouseSurname" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="SpouseFirstNames" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="CombinedName" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="HeadMobile" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="SpouseMobile" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="HeadEMail" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="SpouseEMail" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="PrintBirthdayLabel">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="ChildID" type="xs:int" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="PrintBirthdayLabelResponse">
+        <xs:complexType />
+      </xs:element>
+      <xs:element name="PrintBirthdayLabel_New">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="1" name="child" type="tns:Person" />
+            <xs:element minOccurs="0" maxOccurs="1" name="printer" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:complexType name="Person">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="ID" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="CampusID" type="xs:int" />
+          <xs:element minOccurs="0" maxOccurs="1" name="FirstName" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="LastName" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Gender" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="DoB" type="xs:dateTime" />
+          <xs:element minOccurs="1" maxOccurs="1" name="Grade" type="xs:int" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Comments" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Mobile" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="EMail" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IsTemporary" type="xs:boolean" />
+          <xs:element minOccurs="1" maxOccurs="1" name="MarriedRelationshipID" type="xs:int" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="PrintBirthdayLabel_NewResponse">
+        <xs:complexType />
+      </xs:element>
+      <xs:element name="getHousehold">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="HouseholdID" type="xs:int" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getHouseholdResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="1" name="getHouseholdResult" type="tns:HouseholdInfo" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getChildren">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="HouseholdID" type="xs:int" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getChildrenResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="1" name="getChildrenResult" type="tns:ArrayOfChildrenInfo" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:complexType name="ArrayOfChildrenInfo">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="ChildrenInfo" nillable="true" type="tns:ChildrenInfo" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ChildrenInfo">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="ID" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="HouseholdID" type="xs:int" />
+          <xs:element minOccurs="0" maxOccurs="1" name="FirstNames" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Surname" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="DoB" type="xs:dateTime" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Gender" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Comments" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="GradeIndex" type="xs:int" />
+          <xs:element minOccurs="0" maxOccurs="1" name="CombinedName" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="getChild">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="ChildID" type="xs:int" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getChildResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="1" name="getChildResult" type="tns:ChildrenInfo" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="updateHousehold">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="ID" type="xs:int" />
+            <xs:element minOccurs="0" maxOccurs="1" name="HeadSurname" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="HeadFirstNames" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="HeadMobile" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="HeadEMail" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="SpouseSurname" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="SpouseFirstNames" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="SpouseMobile" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="SpouseEMail" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="updateHouseholdResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="updateHouseholdResult" type="xs:int" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="updateChild">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="ID" type="xs:int" />
+            <xs:element minOccurs="1" maxOccurs="1" name="HouseholdID" type="xs:int" />
+            <xs:element minOccurs="0" maxOccurs="1" name="FirstNames" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="Surname" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="DoB" type="xs:dateTime" />
+            <xs:element minOccurs="0" maxOccurs="1" name="Gender" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="Comments" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="GradeIndex" type="xs:int" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="updateChildResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="updateChildResult" type="xs:int" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="PrintChildLabel_New">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="1" name="child" type="tns:Person" />
+            <xs:element minOccurs="0" maxOccurs="1" name="printer" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="PrintChildLabel_NewResponse">
+        <xs:complexType />
+      </xs:element>
+      <xs:element name="PrintChildLabel">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="ChildID" type="xs:int" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="PrintChildLabelResponse">
+        <xs:complexType />
+      </xs:element>
+      <xs:element name="PrintParentLabel">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="HouseholdID" type="xs:int" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="PrintParentLabelResponse">
+        <xs:complexType />
+      </xs:element>
+      <xs:element name="PrintParentLabel_New">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="1" name="parent1" type="tns:Person" />
+            <xs:element minOccurs="0" maxOccurs="1" name="parent2" type="tns:Person" />
+            <xs:element minOccurs="0" maxOccurs="1" name="printer" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="PrintParentLabel_NewResponse">
+        <xs:complexType />
+      </xs:element>
+      <xs:element name="getClasses">
+        <xs:complexType />
+      </xs:element>
+      <xs:element name="getClassesResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="1" name="getClassesResult" type="tns:ArrayOfClassInfo" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:complexType name="ArrayOfClassInfo">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="ClassInfo" nillable="true" type="tns:ClassInfo" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ClassInfo">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="ID" type="xs:int" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Description" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="AgeFrom" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="AgeTo" type="xs:int" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="CheckIn">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="ChildID" type="xs:int" />
+            <xs:element minOccurs="1" maxOccurs="1" name="ClassID" type="xs:int" />
+            <xs:element minOccurs="1" maxOccurs="1" name="InOut" type="xs:int" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="CheckInResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="CheckInResult" type="xs:boolean" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getKidsInCare">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="Checkin" type="xs:int" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getKidsInCareResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="1" name="getKidsInCareResult" type="tns:ArrayOfCareInfo" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:complexType name="ArrayOfCareInfo">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="CareInfo" nillable="true" type="tns:CareInfo" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="CareInfo">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="ClassName" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="ChildName" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Gender" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Comments" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="HouseholdID" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="DateStamp" type="xs:dateTime" />
+          <xs:element minOccurs="1" maxOccurs="1" name="OutStamp" type="xs:dateTime" />
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+  </types>
+  <message name="getHouseholdsSoapIn">
+    <part name="parameters" element="tns:getHouseholds" />
+  </message>
+  <message name="getHouseholdsSoapOut">
+    <part name="parameters" element="tns:getHouseholdsResponse" />
+  </message>
+  <message name="PrintBirthdayLabelSoapIn">
+    <part name="parameters" element="tns:PrintBirthdayLabel" />
+  </message>
+  <message name="PrintBirthdayLabelSoapOut">
+    <part name="parameters" element="tns:PrintBirthdayLabelResponse" />
+  </message>
+  <message name="PrintBirthdayLabel_NewSoapIn">
+    <part name="parameters" element="tns:PrintBirthdayLabel_New" />
+  </message>
+  <message name="PrintBirthdayLabel_NewSoapOut">
+    <part name="parameters" element="tns:PrintBirthdayLabel_NewResponse" />
+  </message>
+  <message name="getHouseholdSoapIn">
+    <part name="parameters" element="tns:getHousehold" />
+  </message>
+  <message name="getHouseholdSoapOut">
+    <part name="parameters" element="tns:getHouseholdResponse" />
+  </message>
+  <message name="getChildrenSoapIn">
+    <part name="parameters" element="tns:getChildren" />
+  </message>
+  <message name="getChildrenSoapOut">
+    <part name="parameters" element="tns:getChildrenResponse" />
+  </message>
+  <message name="getChildSoapIn">
+    <part name="parameters" element="tns:getChild" />
+  </message>
+  <message name="getChildSoapOut">
+    <part name="parameters" element="tns:getChildResponse" />
+  </message>
+  <message name="updateHouseholdSoapIn">
+    <part name="parameters" element="tns:updateHousehold" />
+  </message>
+  <message name="updateHouseholdSoapOut">
+    <part name="parameters" element="tns:updateHouseholdResponse" />
+  </message>
+  <message name="updateChildSoapIn">
+    <part name="parameters" element="tns:updateChild" />
+  </message>
+  <message name="updateChildSoapOut">
+    <part name="parameters" element="tns:updateChildResponse" />
+  </message>
+  <message name="PrintChildLabel_NewSoapIn">
+    <part name="parameters" element="tns:PrintChildLabel_New" />
+  </message>
+  <message name="PrintChildLabel_NewSoapOut">
+    <part name="parameters" element="tns:PrintChildLabel_NewResponse" />
+  </message>
+  <message name="PrintChildLabelSoapIn">
+    <part name="parameters" element="tns:PrintChildLabel" />
+  </message>
+  <message name="PrintChildLabelSoapOut">
+    <part name="parameters" element="tns:PrintChildLabelResponse" />
+  </message>
+  <message name="PrintParentLabelSoapIn">
+    <part name="parameters" element="tns:PrintParentLabel" />
+  </message>
+  <message name="PrintParentLabelSoapOut">
+    <part name="parameters" element="tns:PrintParentLabelResponse" />
+  </message>
+  <message name="PrintParentLabel_NewSoapIn">
+    <part name="parameters" element="tns:PrintParentLabel_New" />
+  </message>
+  <message name="PrintParentLabel_NewSoapOut">
+    <part name="parameters" element="tns:PrintParentLabel_NewResponse" />
+  </message>
+  <message name="getClassesSoapIn">
+    <part name="parameters" element="tns:getClasses" />
+  </message>
+  <message name="getClassesSoapOut">
+    <part name="parameters" element="tns:getClassesResponse" />
+  </message>
+  <message name="CheckInSoapIn">
+    <part name="parameters" element="tns:CheckIn" />
+  </message>
+  <message name="CheckInSoapOut">
+    <part name="parameters" element="tns:CheckInResponse" />
+  </message>
+  <message name="getKidsInCareSoapIn">
+    <part name="parameters" element="tns:getKidsInCare" />
+  </message>
+  <message name="getKidsInCareSoapOut">
+    <part name="parameters" element="tns:getKidsInCareResponse" />
+  </message>
+  <portType name="LincSoap">
+    <operation name="getHouseholds">
+      <input message="tns:getHouseholdsSoapIn" />
+      <output message="tns:getHouseholdsSoapOut" />
+    </operation>
+    <operation name="PrintBirthdayLabel">
+      <input message="tns:PrintBirthdayLabelSoapIn" />
+      <output message="tns:PrintBirthdayLabelSoapOut" />
+    </operation>
+    <operation name="PrintBirthdayLabel_New">
+      <input message="tns:PrintBirthdayLabel_NewSoapIn" />
+      <output message="tns:PrintBirthdayLabel_NewSoapOut" />
+    </operation>
+    <operation name="getHousehold">
+      <input message="tns:getHouseholdSoapIn" />
+      <output message="tns:getHouseholdSoapOut" />
+    </operation>
+    <operation name="getChildren">
+      <input message="tns:getChildrenSoapIn" />
+      <output message="tns:getChildrenSoapOut" />
+    </operation>
+    <operation name="getChild">
+      <input message="tns:getChildSoapIn" />
+      <output message="tns:getChildSoapOut" />
+    </operation>
+    <operation name="updateHousehold">
+      <input message="tns:updateHouseholdSoapIn" />
+      <output message="tns:updateHouseholdSoapOut" />
+    </operation>
+    <operation name="updateChild">
+      <input message="tns:updateChildSoapIn" />
+      <output message="tns:updateChildSoapOut" />
+    </operation>
+    <operation name="PrintChildLabel_New">
+      <input message="tns:PrintChildLabel_NewSoapIn" />
+      <output message="tns:PrintChildLabel_NewSoapOut" />
+    </operation>
+    <operation name="PrintChildLabel">
+      <input message="tns:PrintChildLabelSoapIn" />
+      <output message="tns:PrintChildLabelSoapOut" />
+    </operation>
+    <operation name="PrintParentLabel">
+      <input message="tns:PrintParentLabelSoapIn" />
+      <output message="tns:PrintParentLabelSoapOut" />
+    </operation>
+    <operation name="PrintParentLabel_New">
+      <input message="tns:PrintParentLabel_NewSoapIn" />
+      <output message="tns:PrintParentLabel_NewSoapOut" />
+    </operation>
+    <operation name="getClasses">
+      <input message="tns:getClassesSoapIn" />
+      <output message="tns:getClassesSoapOut" />
+    </operation>
+    <operation name="CheckIn">
+      <input message="tns:CheckInSoapIn" />
+      <output message="tns:CheckInSoapOut" />
+    </operation>
+    <operation name="getKidsInCare">
+      <input message="tns:getKidsInCareSoapIn" />
+      <output message="tns:getKidsInCareSoapOut" />
+    </operation>
+  </portType>
+  <binding name="LincSoap" type="tns:LincSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="getHouseholds">
+      <soap:operation soapAction="http://tempuri.org/getHouseholds" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="PrintBirthdayLabel">
+      <soap:operation soapAction="http://tempuri.org/PrintBirthdayLabel" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="PrintBirthdayLabel_New">
+      <soap:operation soapAction="http://tempuri.org/PrintBirthdayLabel_New" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getHousehold">
+      <soap:operation soapAction="http://tempuri.org/getHousehold" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getChildren">
+      <soap:operation soapAction="http://tempuri.org/getChildren" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getChild">
+      <soap:operation soapAction="http://tempuri.org/getChild" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="updateHousehold">
+      <soap:operation soapAction="http://tempuri.org/updateHousehold" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="updateChild">
+      <soap:operation soapAction="http://tempuri.org/updateChild" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="PrintChildLabel_New">
+      <soap:operation soapAction="http://tempuri.org/PrintChildLabel_New" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="PrintChildLabel">
+      <soap:operation soapAction="http://tempuri.org/PrintChildLabel" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="PrintParentLabel">
+      <soap:operation soapAction="http://tempuri.org/PrintParentLabel" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="PrintParentLabel_New">
+      <soap:operation soapAction="http://tempuri.org/PrintParentLabel_New" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getClasses">
+      <soap:operation soapAction="http://tempuri.org/getClasses" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="CheckIn">
+      <soap:operation soapAction="http://tempuri.org/CheckIn" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getKidsInCare">
+      <soap:operation soapAction="http://tempuri.org/getKidsInCare" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="LincSoap12" type="tns:LincSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="getHouseholds">
+      <soap12:operation soapAction="http://tempuri.org/getHouseholds" style="document" />
+      <input>
+        <soap12:body use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="PrintBirthdayLabel">
+      <soap12:operation soapAction="http://tempuri.org/PrintBirthdayLabel" style="document" />
+      <input>
+        <soap12:body use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="PrintBirthdayLabel_New">
+      <soap12:operation soapAction="http://tempuri.org/PrintBirthdayLabel_New" style="document" />
+      <input>
+        <soap12:body use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getHousehold">
+      <soap12:operation soapAction="http://tempuri.org/getHousehold" style="document" />
+      <input>
+        <soap12:body use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getChildren">
+      <soap12:operation soapAction="http://tempuri.org/getChildren" style="document" />
+      <input>
+        <soap12:body use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getChild">
+      <soap12:operation soapAction="http://tempuri.org/getChild" style="document" />
+      <input>
+        <soap12:body use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="updateHousehold">
+      <soap12:operation soapAction="http://tempuri.org/updateHousehold" style="document" />
+      <input>
+        <soap12:body use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="updateChild">
+      <soap12:operation soapAction="http://tempuri.org/updateChild" style="document" />
+      <input>
+        <soap12:body use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="PrintChildLabel_New">
+      <soap12:operation soapAction="http://tempuri.org/PrintChildLabel_New" style="document" />
+      <input>
+        <soap12:body use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="PrintChildLabel">
+      <soap12:operation soapAction="http://tempuri.org/PrintChildLabel" style="document" />
+      <input>
+        <soap12:body use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="PrintParentLabel">
+      <soap12:operation soapAction="http://tempuri.org/PrintParentLabel" style="document" />
+      <input>
+        <soap12:body use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="PrintParentLabel_New">
+      <soap12:operation soapAction="http://tempuri.org/PrintParentLabel_New" style="document" />
+      <input>
+        <soap12:body use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getClasses">
+      <soap12:operation soapAction="http://tempuri.org/getClasses" style="document" />
+      <input>
+        <soap12:body use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="CheckIn">
+      <soap12:operation soapAction="http://tempuri.org/CheckIn" style="document" />
+      <input>
+        <soap12:body use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getKidsInCare">
+      <soap12:operation soapAction="http://tempuri.org/getKidsInCare" style="document" />
+      <input>
+        <soap12:body use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="Linc">
+    <port name="LincSoap" binding="tns:LincSoap">
+      <soap:address location="http://192.168.1.229/linc.asmx" />
+    </port>
+    <port name="LincSoap12" binding="tns:LincSoap12">
+      <soap12:address location="http://192.168.1.229/linc.asmx" />
+    </port>
+  </service>
+</definitions>

@@ -1,0 +1,59 @@
+# Version: 8.10.0.267 (6481535)
+# [first argument, ignore] # /Users/warrenschwartz/Google Drive/Projects/Illumin8/Kidz/bin/iPhoneSimulator/Debug/mtouch.exe
+/Library/Frameworks/Xamarin.iOS.framework/Versions/8.10.0.267/bin/mtouch \
+	-sdkroot \
+	/Applications/Xcode.app/Contents/Developer \
+	--cache \
+	"/Users/warrenschwartz/Google Drive/Projects/Illumin8/Kidz/obj/iPhoneSimulator/Debug/mtouch-cache" \
+	--executable \
+	Kidz \
+	--nomanifest \
+	--nosign \
+	-sim \
+	"/Users/warrenschwartz/Google Drive/Projects/Illumin8/Kidz/bin/iPhoneSimulator/Debug/Kidz.app" \
+	-r \
+	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/2.1/System.dll \
+	-r \
+	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/2.1/System.Xml.dll \
+	-r \
+	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/2.1/System.Core.dll \
+	-r \
+	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/2.1/monotouch.dll \
+	-r \
+	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/2.1/System.Web.Services.dll \
+	-r \
+	"/Users/warrenschwartz/Google Drive/Projects/Illumin8/Components/zumero-1.5.0.2157/lib/ios/Zumero_iOS.dll" \
+	-r \
+	"/Users/warrenschwartz/Google Drive/Projects/Illumin8/Components/sqlite-net-1.0.1/lib/ios/SQLite.dll" \
+	-r \
+	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/2.1/System.Data.dll \
+	-r \
+	"/Users/warrenschwartz/Google Drive/Projects/Illumin8/Components/scandit-4.2.1/lib/ios/ScanditSDK.dll" \
+	-r \
+	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/2.1/System.Net.dll \
+	-r \
+	"/Users/warrenschwartz/Google Drive/Projects/Illumin8/Components/azure-mobile-services-1.3.1/lib/ios/Microsoft.WindowsAzure.Mobile.Ext.dll" \
+	-r \
+	"/Users/warrenschwartz/Google Drive/Projects/Illumin8/Components/azure-mobile-services-1.3.1/lib/ios/Microsoft.WindowsAzure.Mobile.dll" \
+	-r \
+	"/Users/warrenschwartz/Google Drive/Projects/Illumin8/Components/azure-mobile-services-1.3.1/lib/ios/Newtonsoft.Json.dll" \
+	-r \
+	"/Users/warrenschwartz/Google Drive/Projects/Illumin8/Components/azure-mobile-services-1.3.1/lib/ios/System.Net.Http.Extensions.dll" \
+	-r \
+	"/Users/warrenschwartz/Google Drive/Projects/Illumin8/Components/azure-mobile-services-1.3.1/lib/ios/System.Net.Http.Primitives.dll" \
+	-r \
+	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/2.1/System.Net.Http.dll \
+	-r \
+	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/2.1/System.ServiceModel.dll \
+	-r \
+	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/2.1/System.Runtime.Serialization.dll \
+	-debug \
+	-nolink \
+	-sdk \
+	8.3 \
+	-targetver \
+	7.0 \
+	--abi=i386 \
+	--gcc_flags \
+	"-Xlinker -sectcreate -Xlinker __TEXT -Xlinker __entitlements -Xlinker \"/Users/warrenschwartz/Google Drive/Projects/Illumin8/Kidz/bin/iPhoneSimulator/Debug/Kidz.xcent\"" \
+	"/Users/warrenschwartz/Google Drive/Projects/Illumin8/Kidz/bin/iPhoneSimulator/Debug/Kidz.exe" \

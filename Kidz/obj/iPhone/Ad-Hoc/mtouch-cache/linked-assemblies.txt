@@ -1,0 +1,10 @@
+/Users/warren/Projects/Illumin8/Kidz/obj/iPhone/Ad-Hoc/mtouch-cache/Link/System.Core.dll
+/Users/warren/Projects/Illumin8/Kidz/obj/iPhone/Ad-Hoc/mtouch-cache/Link/mscorlib.dll
+/Users/warren/Projects/Illumin8/Kidz/obj/iPhone/Ad-Hoc/mtouch-cache/Link/monotouch.dll
+/Users/warren/Projects/Illumin8/Kidz/obj/iPhone/Ad-Hoc/mtouch-cache/Link/Zumero_iOS.dll
+/Users/warren/Projects/Illumin8/Kidz/obj/iPhone/Ad-Hoc/mtouch-cache/Link/SQLite.dll
+/Users/warren/Projects/Illumin8/Kidz/obj/iPhone/Ad-Hoc/mtouch-cache/Link/Kidz.exe
+/Users/warren/Projects/Illumin8/Kidz/obj/iPhone/Ad-Hoc/mtouch-cache/Link/ScanditSDK.dll
+/Users/warren/Projects/Illumin8/Kidz/obj/iPhone/Ad-Hoc/mtouch-cache/Link/System.Xml.dll
+/Users/warren/Projects/Illumin8/Kidz/obj/iPhone/Ad-Hoc/mtouch-cache/Link/System.dll
+/Users/warren/Projects/Illumin8/Kidz/obj/iPhone/Ad-Hoc/mtouch-cache/Link/System.Web.Services.dll

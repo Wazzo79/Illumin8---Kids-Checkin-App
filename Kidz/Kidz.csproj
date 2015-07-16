@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+    <ProjectTypeGuids>{6BC8ED88-2882-458C-8E55-DFD12B67127B};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectGuid>{C991B56A-D162-40E5-847A-17D2319E684B}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Kidz</RootNamespace>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <AssemblyName>Kidz</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchLink>None</MtouchLink>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchDebug>true</MtouchDebug>
+    <CodesignProvision>b095e6d0-8a7d-47ec-b444-c049f6b7d78a</CodesignProvision>
+    <CodesignKey>iPhone Distribution: Warren Schwartz (LM2Z3TLU9Q)</CodesignKey>
+    <MtouchI18n>
+    </MtouchI18n>
+    <MtouchArch>i386</MtouchArch>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchLink>None</MtouchLink>
+    <ConsolePause>false</ConsolePause>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchDebug>true</MtouchDebug>
+    <CodesignKey>iPhone Distribution: Warren Schwartz (LM2Z3TLU9Q)</CodesignKey>
+    <IpaPackageName>
+    </IpaPackageName>
+    <MtouchI18n>
+    </MtouchI18n>
+    <MtouchArch>ARMv7</MtouchArch>
+    <CodesignProvision>b095e6d0-8a7d-47ec-b444-c049f6b7d78a</CodesignProvision>
+    <BuildIpa>true</BuildIpa>
+    <IpaIncludeArtwork>true</IpaIncludeArtwork>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <ConsolePause>false</ConsolePause>
+    <CodesignKey>iPhone Developer</CodesignKey>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Ad-Hoc|iPhone' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\Ad-Hoc</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <BuildIpa>true</BuildIpa>
+    <CodesignProvision>Automatic:AdHoc</CodesignProvision>
+    <CodesignKey>iPhone Distribution</CodesignKey>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'AppStore|iPhone' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\AppStore</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Distribution</CodesignKey>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <ConsolePause>false</ConsolePause>
+    <CodesignProvision>Automatic:AppStore</CodesignProvision>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="monotouch" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="Zumero_iOS">
+      <HintPath>..\Components\zumero-1.5.0.2157\lib\ios\Zumero_iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLite">
+      <HintPath>..\Components\sqlite-net-1.0.1\lib\ios\SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="ScanditSDK">
+      <HintPath>..\Components\scandit-4.2.1\lib\ios\ScanditSDK.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net" />
+    <Reference Include="Microsoft.WindowsAzure.Mobile.Ext">
+      <HintPath>..\Components\azure-mobile-services-1.3.1\lib\ios\Microsoft.WindowsAzure.Mobile.Ext.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAzure.Mobile">
+      <HintPath>..\Components\azure-mobile-services-1.3.1\lib\ios\Microsoft.WindowsAzure.Mobile.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\Components\azure-mobile-services-1.3.1\lib\ios\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Extensions">
+      <HintPath>..\Components\azure-mobile-services-1.3.1\lib\ios\System.Net.Http.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Primitives">
+      <HintPath>..\Components\azure-mobile-services-1.3.1\lib\ios\System.Net.Http.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Runtime.Serialization" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Info.plist" />
+    <None Include="Entitlements.plist" />
+    <None Include="Web References\LincService\lincservice.disco" />
+    <None Include="Web References\LincService\lincservice.wsdl" />
+    <None Include="Web References\LincService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\PrintService\linc.wsdl" />
+    <None Include="Web References\PrintService\linc.disco" />
+    <None Include="Web References\PrintService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Main.cs" />
+    <Compile Include="AppDelegate.cs" />
+    <Compile Include="HouseholdsViewController.cs" />
+    <Compile Include="HouseholdsViewController.designer.cs">
+      <DependentUpon>HouseholdsViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ScanViewController.designer.cs">
+      <DependentUpon>CheckinViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KidsInCareViewController.cs" />
+    <Compile Include="KidsInCareViewController.designer.cs">
+      <DependentUpon>KidsInCareViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsViewController.cs" />
+    <Compile Include="SettingsViewController.designer.cs">
+      <DependentUpon>SettingsViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\LincService\Reference.cs">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="DataLayer.cs" />
+    <Compile Include="MyClass.cs" />
+    <Compile Include="HouseholdDetailViewController.cs" />
+    <Compile Include="HouseholdDetailViewController.designer.cs">
+      <DependentUpon>HouseholdDetailViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersonViewController.cs" />
+    <Compile Include="PersonViewController.designer.cs">
+      <DependentUpon>PersonViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\PrintService\Reference.cs">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="CheckinViewController.cs" />
+    <Compile Include="CheckinViewController.designer.cs">
+      <DependentUpon>CheckinViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SnapIndemnityViewController.cs" />
+    <Compile Include="SnapIndemnityViewController.designer.cs">
+      <DependentUpon>SnapIndemnityViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildViewController.cs" />
+    <Compile Include="ChildViewController.designer.cs">
+      <DependentUpon>ChildViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reachability.cs" />
+    <Compile Include="ImageViewController.cs" />
+    <Compile Include="ImageViewController.designer.cs">
+      <DependentUpon>ImageViewController.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <InterfaceDefinition Include="MainStoryboard_iPhone.storyboard" />
+    <InterfaceDefinition Include="MainStoryboard_iPad.storyboard" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Default-568h%402x.png" />
+    <BundleResource Include="Resources\first.png" />
+    <BundleResource Include="Resources\first%402x.png" />
+    <BundleResource Include="Resources\second.png" />
+    <BundleResource Include="Resources\second%402x.png" />
+    <BundleResource Include="Resources\974-users.png" />
+    <BundleResource Include="Resources\974-users%402x.png" />
+    <BundleResource Include="Resources\1020-barcode.png" />
+    <BundleResource Include="Resources\1020-barcode%402x.png" />
+    <BundleResource Include="Resources\1100-list-2.png" />
+    <BundleResource Include="Resources\1100-list-2%402x.png" />
+    <BundleResource Include="Resources\912-gears.png" />
+    <BundleResource Include="Resources\912-gears%402x.png" />
+    <BundleResource Include="Resources\1040-checkmark.png" />
+    <BundleResource Include="Resources\1040-checkmark%402x.png" />
+    <BundleResource Include="Resources\1040-checkmark-selected.png" />
+    <BundleResource Include="Resources\1040-checkmark-selected%402x.png" />
+    <BundleResource Include="Resources\Icon.png" />
+    <BundleResource Include="Resources\Icon%402x.png" />
+    <BundleResource Include="Resources\Icon-60%402x.png" />
+    <BundleResource Include="Resources\Icon-76.png" />
+    <BundleResource Include="Resources\Icon-76%402x.png" />
+    <BundleResource Include="Resources\Icon-72.png" />
+    <BundleResource Include="Resources\Icon-72%402x.png" />
+    <BundleResource Include="Resources\Default.png" />
+    <BundleResource Include="Resources\Default%402x.png" />
+    <BundleResource Include="Resources\Default-Portrait.png" />
+    <BundleResource Include="Resources\Default-Portrait%402x.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.MonoTouch.CSharp.targets" />
+  <ItemGroup>
+    <WebReferences Include="Web References" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://41.185.30.157/lincservice.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\LincService</RelPath>
+      <UpdateFromURL>http://41.185.30.157/lincservice.asmx</UpdateFromURL>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://192.168.1.229/linc.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\PrintService</RelPath>
+      <UpdateFromURL>http://192.168.1.229/linc.asmx</UpdateFromURL>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <XamarinComponentReference Include="zumero">
+      <Version>1.5.0.2157</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+    <XamarinComponentReference Include="sqlite-net">
+      <Version>1.0.1</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+    <XamarinComponentReference Include="scandit">
+      <Version>4.2.1</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+    <XamarinComponentReference Include="azure-mobile-services">
+      <Version>1.3.1</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,21 @@
+﻿<Properties StartupItem="Kidz/Kidz.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhone" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneDeviceTarget.iPhone" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Kidz/HouseholdDetailViewController.cs">
+    <Files>
+      <File FileName="Kidz/SettingsViewController.cs" Line="1" Column="1" />
+      <File FileName="Kidz/HouseholdDetailViewController.cs" Line="530" Column="53" />
+      <File FileName="Kidz/HouseholdsViewController.cs" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/warren/Projects/Illumin8/Kidz/CheckinViewController.cs" line="160" column="15" />
+      <Breakpoint file="/Users/warren/Projects/Illumin8/Kidz/PersonViewController.cs" line="65" column="24" />
+      <Breakpoint file="/Users/warren/Projects/Illumin8/Kidz/DataLayer.cs" line="905" column="12" />
+      <Breakpoint file="/Users/warren/Projects/Illumin8/Kidz/DataLayer.cs" line="932" column="18" />
+      <Breakpoint file="/Users/warren/Projects/Illumin8/Kidz/DataLayer.cs" line="157" column="36" />
+      <Breakpoint file="/Users/warrenschwartz/Google Drive/Projects/Illumin8/Kidz/PersonViewController.cs" line="62" column="17" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
